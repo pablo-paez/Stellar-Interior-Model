@@ -26,7 +26,7 @@ Python 3.8 or higher is recommended. It is advised to use a virtual environment.
 Clone the repository and install the package:
 
 ```bash
-git clone https://github.com/TuUsuario/Stellar-Interior-Model.git
+git clone https://github.com/pablo-paez/Stellar-Interior-Model.git
 cd Stellar-Interior-Model
 pip install .
 ```
