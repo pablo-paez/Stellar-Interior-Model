@@ -1,5 +1,5 @@
-from surface_integration import outer_layers, surf_int
-from centre_integration import first_layers, centre_int
+from .surface_integration import outer_layers, surf_int
+from .centre_integration import first_layers, centre_int
 import math
 
 def border(parametro_rad, i_2: int,r,P,T,L,M):

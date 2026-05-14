@@ -1,4 +1,4 @@
-from Auxiliary_functions import gen_rate
+from .Auxiliary_functions import gen_rate
 
 def radiative3(M,dM: list[float],Pcal: float,Tcal: float,r: list[float],mu: float,h: float,i: int):
     """

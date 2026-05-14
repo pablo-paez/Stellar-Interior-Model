@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from simple_model import model
+from .simple_model import model
 
 def golden_section(Mtot: float,Ltot: float,Rtot: float,X: float,Y: float,Ti: float=1.9,Tf: float=2.0,Rini: float=None,n_capas: int=100,tol: float=0.0001,tol2: float=1e-5):
     """

@@ -1,6 +1,6 @@
-from Auxiliary_functions import Erel, gen_rate
-from radiative import radiative3
-from surface_integration_aux import presandtemp_layer_noP
+from .Auxiliary_functions import Erel, gen_rate
+from .radiative import radiative3
+from .surface_integration_aux import presandtemp_layer_noP
 
 def conv_center_eq(mu: float,T: float,r: float,K: float,X: float,Z: float):
     """

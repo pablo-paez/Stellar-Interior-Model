@@ -1,5 +1,5 @@
-from Optimization_functions import refinement
-from simple_model import model
+from .Optimization_functions import refinement
+from .simple_model import model
 
 def optimized_model(Mtot: float,Ltot: float,Tc: float,Rtot: float,X: float,Y: float,n_capas: int= 100,Rini=None,tol=0.0001,tol2=1e-5,g=5/3, r_inf = 11.5,r_sup = 12.5,L_inf = 35,L_sup = 50,itL=11,itr=11,it: int=3, debug: bool =True, debug2: bool =True, debug_opt_param: bool =True):
     """

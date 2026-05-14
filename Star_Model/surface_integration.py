@@ -1,6 +1,6 @@
-from surface_integration_aux import der_pres_rad, der_temp_rad, temp_rad, pres_rad, presandtemp_layer, presandtemp_layer_noP
-from radiative import radiative3, radiative4, radiative6, radiative7, radiative9
-from Auxiliary_functions import Erel, gen_rate, polytropic
+from .surface_integration_aux import der_pres_rad, der_temp_rad, temp_rad, pres_rad, presandtemp_layer, presandtemp_layer_noP
+from .radiative import radiative3, radiative4, radiative6, radiative7, radiative9
+from .Auxiliary_functions import Erel, gen_rate, polytropic
 
 def outer_layers(Rtot: float,Rini: float,h: float,mu: float,X: float,Z: float,Mtot: float,Ltot: float):
     """This function calculates the outer layers of the model which cannot be calculated earlier.

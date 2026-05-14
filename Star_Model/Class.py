@@ -1,12 +1,14 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from simple_model import border
-from Optimized_model import optimized_model
-from Optimization_functions import golden_section
+from .simple_model import border
+from .Optimized_model import optimized_model
+from .Optimization_functions import golden_section
 import math
 import pandas as pd
-from Auxiliary_functions import gen_rate, rho_fun, opacity
-from Charts import parameter_charts, HRDiagram
+from .Auxiliary_functions import gen_rate, rho_fun, opacity
+from .Charts import parameter_charts, HRDiagram
+import os
+_DIR = os.path.dirname(os.path.abspath(__file__))
 
 class StarModel:
     def __init__(self, Mtot: float, X: float, Y: float, Ltot: float, Rtot: float, Tc: float, unidades_solares:bool = False):
@@ -50,7 +52,7 @@ class StarModel:
         self.Teff = None
         self.error_rel = None
         self.tipo_energia = None #Save the energy generation process (None means --, 1 means PP and 0 means CN)
-        self.fase_transp = None # None==ˆˆˆˆˆˆ, 0==RADIAT, 1==CONVEC, 2==CENTRO and 3==INICI
+        self.fase_transp = None # None==ˆˆˆˆˆˆ, 0==RADIAT, 1==CONVEC, 2==CENTRO and 3==INICIO
         self.r           = None
         self.P           = None
         self.T           = None
@@ -299,7 +301,7 @@ class StarModel:
         """
         Plotting the HR diagram using the Hipparcos catalogue with 10.000 stars.
         """
-        file_path = 'asu (1).tsv'
+        file_path = os.path.join(_DIR, 'asu (1).tsv')
         df = pd.read_csv(file_path, sep='|', comment='#', skipinitialspace=True)
         df = df.iloc[2:].reset_index(drop=True)
 
